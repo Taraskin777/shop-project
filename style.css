@@ -163,8 +163,7 @@
 }
 
 .korz {
-    margin-top: 5px
-    ;
+    margin-top: 5px;
     width: 40px;
     height: 40px;
     border: 1px solid;
@@ -205,8 +204,6 @@
    
     padding-top: 30px;
    
-    
-    
 
 }
 
@@ -219,13 +216,10 @@
     color: white;
   
 }
-.submenu > li > a:hover 
- {
+.submenu > li > a:hover {
     background-color: white;
     color: #2c71b8;
     
-    
-   
 }
 
 
@@ -244,7 +238,4 @@ li:hover>.submenu {
     padding-bottom: 10px;
     color: white;
       
-}
-.submenu > li > a > :first-child {
-    
 }
