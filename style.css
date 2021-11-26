@@ -22,8 +22,7 @@
 }
 
 .row::after,
-.menu::after,
-.search-box::after {
+.menu::after {
     content: "";
     display: block;
     clear: both;
@@ -32,7 +31,7 @@
 .header {
     background-color: rgba(255, 255, 255, 0.75);
     padding: 25px 0;
-    
+
 }
 
 [class*="col-"] {
@@ -59,6 +58,10 @@
     width: 50%;
 }
 
+.col-9 {
+    width: 75%;
+}
+
 .col-12 {
     width: 100%;
 }
@@ -66,16 +69,14 @@
 .logo {
     margin-top: 9px;
 }
-.menu {
-   
-}
+
+.menu {}
 
 .menu li {
     float: left;
     width: 25%;
     border-left: 1px solid #2c71b8;
     position: relative;
-
 
 }
 
@@ -98,92 +99,95 @@
     color: white;
 }
 
-.search-box {
-
-    display: block;
-    border: 1px solid;
-    width: 200px;
-    height: 40px;
-
+.search {
+    border: 1px solid #2c71b8;
+    padding: 5px;
+    height: 39px;
     margin-top: 5px;
-    color: #2c71b8;
-
-}
-
-.text {
-
-    width: 160px;
-    border: 0px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.0);
-
-    font-size: 21px;
-    float: left;
-
 }
 
 ::placeholder {
     color: #2c71b8;
+    font-size: 21px;
+    padding-left: 15px;
+}
+.searchfield {
+    font-family: 'Roboto', sans-serif;
+    border: 0px;
+    background: inherit;
+    outline: none;
+    width: 153px;
+    float: left;
+    height: 30px;
+    
+}
+
+.buttonsearch {
+    background-image: url(/lesson-9/shop-project/images/search.png);
+    width: 30px;
+    height: 30px;
+    background-position: center center;
+    background-color: #2c71b8;
+    background-repeat: no-repeat;
+    border: none;
+    
    
+}
+.cart {
+    position: relative;
+}
+
+.korz {
+    margin-top: 5px
+    ;
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    float: right;
+    background-image: url(/lesson-9/shop-project/images/korzbl.png);
+    background-position: center center;
+    background-color: white;
+    background-repeat: no-repeat;
+    border: none;
+    
 
 }
 
-input {
-    padding: 0 20px;
-    border: none;
-    outline: none;
+.product-count {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2c71b8;
+    color: white;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    left: -5px;
+    top: -5px;
+
+}
+.submenu a:hover {
+    background-color: white;
     color: #2c71b8;
 }
 
-input {
-    font-family: 'Roboto', sans-serif;
-}
-
-.lupa {
-
-    margin-top: 4px;
-    margin-right: 5px;
-    border: 1px solid;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    background-color: #2c71b8;
-    text-align: center;
-    float: right;
-}
-
-button {
-    float: right;
-    width: 40px;
-    height: 40px;
-    margin-top: -40px;
-    line-height: 40px;
-    text-align: center;
-
-}
-
-
-.submenu a:hover {
-background-color: white;
-color: #2c71b8;
-   
-
-}
 .submenu {
     display: none;
     position: absolute;
     list-style-type: none;
-    background-color:#2c71b8 ;
+    background-color: #2c71b8;
     color: white;
     height: 366px;
-      
+
 }
+
 .submenu li {
-    
+
     width: 285px;
 }
-    
-li:hover > .submenu {
+
+li:hover>.submenu {
     display: block;
-    
+
 }
