@@ -103,7 +103,8 @@ menu>li>a:hover.arrowdown{
   
 }
 
-.menu>li> :last-child {
+.menu>li> :last-child { 
+    style.css:105:
     border-right: 1px solid #2c71b8;
 }
 
