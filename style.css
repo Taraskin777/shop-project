@@ -84,7 +84,7 @@
     position: absolute;
    
     z-index: 10;
-    background-image: url(/lesson-9/shop-project/images/arrowblue.png);
+    background-image: url(images/arrowblue.png);
     width: 15px;
     height: 15px;
     border: none;
@@ -99,7 +99,7 @@
 
 menu>li>a:hover.arrowdown{
 
-   background-image: url(/lesson-9/shop-project/images/arrowwhite.png);
+   background-image: url(images/arrowwhite.png);
   
 }
 
