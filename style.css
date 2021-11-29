@@ -79,6 +79,10 @@
     position: relative;
 
 }
+.menu>li:hover .arrowdown {
+       color: white;
+       background-image: url(images/arrowwhite.png);    
+    }
 
 .arrowdown {
     position: absolute;
@@ -92,17 +96,11 @@
     top: 0;
     right: 10px;
     bottom: 0;
-    
-    
+      
 }
 
-menu>li>a:hover.arrowdown {
 
-   background-image: url(images/arrowwhite.png);
-  
-}
-
-.menu>li>:last-child { 
+.menu>li:last-child { 
     style.css:105;
     border-right: 1px solid #2c71b8;
 }
@@ -215,7 +213,7 @@ menu>li>a:hover.arrowdown {
 }
 
 .submenu>li {
-    width: 285px;
+    width: 286px;
     height: 40px;
     font-size: 21px;
     color: white;
