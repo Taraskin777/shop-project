@@ -72,37 +72,42 @@
 
 
 
-.menu > li {
+.menu>li {
     float: left;
     width: 25%;
     border-left: 1px solid #2c71b8;
     position: relative;
 
 }
+
 .arrowdown {
- position: absolute;
-    background-image: url(/lesson-9/shop-project/images/172458_down_arrow_icon.svg);
-   width: 15px;
-   height: 15px;  
-   border: none;
-   color: #2c71b8;
-  margin: auto;
-  top: 0;
-  right: 10px;
-  bottom: 0;
+    position: absolute;
+   
+    z-index: 10;
+    background-image: url(/lesson-9/shop-project/images/arrowblue.png);
+    width: 15px;
+    height: 15px;
+    border: none;
+    color: #2c71b8;
+    margin: auto;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    
+    
+}
+
+menu>li>a:hover.arrowdown{
+
+   background-image: url(/lesson-9/shop-project/images/arrowwhite.png);
   
 }
 
-.arrowdown:hover {
-  
-    color: white;
-}
-
-.menu > li > :last-child {
+.menu>li> :last-child {
     border-right: 1px solid #2c71b8;
 }
 
-.menu > li > a {
+.menu>li>a {
     display: block;
     height: 50px;
     text-align: center;
@@ -110,11 +115,13 @@
     text-decoration: none;
     color: #2c71b8;
     font-size: 21px;
+    
 }
 
-.menu > li > a:hover {
+.menu>li>a:hover {
     background-color: #2c71b8;
     color: white;
+    
 }
 
 .search {
@@ -129,8 +136,8 @@
     font-size: 21px;
     padding-left: 15px;
     
-    
 }
+
 .searchfield {
     font-family: 'Roboto', sans-serif;
     border: 0px;
@@ -142,8 +149,8 @@
     color: #2c71b8;
     font-size: 21px;
     line-height: 30px;
-    
-    
+
+
 }
 
 .buttonsearch {
@@ -155,9 +162,10 @@
     background-repeat: no-repeat;
     border: none;
     margin-top: -1px;
-    
-   
+
+
 }
+
 .cart {
     position: relative;
 }
@@ -173,7 +181,7 @@
     background-color: white;
     background-repeat: no-repeat;
     border: none;
-    
+
 
 }
 
@@ -194,48 +202,45 @@
 
 
 .submenu {
-    /* display: none; */
+    display: none;
     position: absolute;
     list-style-type: none;
     background-color: #2c71b8;
-    
     height: 315px;
     left: -1px;
-   
     padding-top: 30px;
+    
    
-
+    
 }
 
-.submenu > li {
-
-
+.submenu>li {
     width: 285px;
     height: 40px;
     font-size: 21px;
     color: white;
-  
+
 }
-.submenu > li > a:hover {
+.submenu>li>a:hover {
     background-color: white;
     color: #2c71b8;
-    
 }
-
 
 li:hover>.submenu {
     display: block;
-    
-   
-    
-
 }
-.submenu > li > a {
+
+li:hover > a {
+    background-color: #2c71b8;
+    color: white;
+}
+
+.submenu>li>a {
     display: block;
     text-decoration: none;
     padding-left: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
     color: white;
-      
+
 }
