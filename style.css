@@ -82,7 +82,6 @@
 
 .arrowdown {
     position: absolute;
-   
     z-index: 10;
     background-image: url(images/arrowblue.png);
     width: 15px;
@@ -97,14 +96,14 @@
     
 }
 
-menu>li>a:hover.arrowdown{
+menu>li>a:hover.arrowdown {
 
    background-image: url(images/arrowwhite.png);
   
 }
 
 .menu>li> :last-child { 
-    style.css:105:
+    style.css:105;
     border-right: 1px solid #2c71b8;
 }
 
