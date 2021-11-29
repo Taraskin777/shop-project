@@ -154,7 +154,7 @@ menu>li>a:hover.arrowdown{
 }
 
 .buttonsearch {
-    background-image: url(/lesson-9/shop-project/images/search.png);
+    background-image: url(images/search.png);
     width: 30px;
     height: 30px;
     background-position: center center;
@@ -176,7 +176,7 @@ menu>li>a:hover.arrowdown{
     height: 40px;
     border: 1px solid;
     float: right;
-    background-image: url(/lesson-9/shop-project/images/korzbl.png);
+    background-image: url(images/korzbl.png);
     background-position: center center;
     background-color: white;
     background-repeat: no-repeat;
