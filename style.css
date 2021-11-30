@@ -8,8 +8,8 @@
     background-image: url("images/patt.png");
 }
 
-
-.container {
+ /* header */
+.container  {
     width: 1200px;
     margin: 0 auto;
     padding-left: 15px;
@@ -246,3 +246,45 @@ li:hover > a {
     color: white;
 
 }
+
+/* main */
+
+.container-2 {
+    width: 1200px;
+    margin: 0 auto;
+    
+}
+
+
+
+.breadcrumb>li {
+    float: left;
+  
+}
+.breadcrumb>li>a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #acc1dd;
+}
+
+.breadcrumb::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+h2 {
+font-size: 48px;
+color: white;
+font-weight: bolder;
+
+
+}
+
+.product-card {
+    width: 33.33333%;
+    float: left;
+   padding-right: 15px;
+   height: 650px;
+}
+
