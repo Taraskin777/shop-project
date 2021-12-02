@@ -56,10 +56,17 @@
     width: 25%;
 }
 
+.col-4 {
+    width: 33.33333%;
+}
+
 .col-6 {
     width: 50%;
 }
 
+.col-8 {
+    width: 66.66667%;
+}
 .col-9 {
     width: 75%;
 }
@@ -259,18 +266,6 @@ li:hover>a {
 
 /* main */
 
-.container-2 {
-    width: 1200px;
-    margin: 0 auto;
-
-
-}
-
-.main ::after {
-    content: "";
-    display: block;
-    clear: both;
-}
 
 .breadcrumb>li {
     float: left;
@@ -308,27 +303,22 @@ h2 {
 .product-card {
     width: 270px;
     height: 650px;
-    float: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
 
-    margin: 15px;
     border: solid 1px #ffff;
-    background-color: rgba(44, 113, 184, 0.75);
-
-
+    
 
 }
+.product-body {
 
-.product-box {
-
-    width: 900px;
-    margin-left: -15px;
-
+    width: 268px;
+    height: 468px;
+background-color: rgba(44, 113, 184, 0.75);
 }
-
-
 
 .boximage {
-    width: 270px;
+    width: 269px;
     height: 180px;
     background-color: rgba(255, 255, 255, 0.75);
     position: relative;
@@ -393,12 +383,12 @@ h2 {
     font-size: 30px;
     color: white;
     font-weight: bold;
-    margin-top: 15px;
+    padding-top: 15px;
     margin-left: 15px;
     margin-bottom: 18px;
 }
 
-.product-card>p {
+.product-body>p {
     color: white;
     font-size: 21px;
     margin-left: 15px;
@@ -432,7 +422,7 @@ sup {
     font-size: 24px;
 }
 
-.more {
+.button-big {
     width: 210px;
     height: 50px;
     line-height: 50px;
@@ -454,24 +444,24 @@ sup {
 }
 
 .add {
-    width: 210px;
-    height: 50px;
-    line-height: 50px;
-    color: white;
-    font-size: 21px;
-    font-weight: 550;
-
-    border: solid 1px white;
-    text-align: center;
-    margin-left: 30px;
+    
     background-image: url(images/korzwhite.png);
     background-color: #568dc6;
     background-position: 182px center;
     background-repeat: no-repeat;
+    
 }
 .add:hover {
 background-color: white;
 color: #2c71b8;
 background-image: url(images/korzbl.png);
 
+}
+
+.load-more {
+
+    color: white;
+    text-align: center;
+    font-size: 36px;
+    margin-top: 40px;
 }
