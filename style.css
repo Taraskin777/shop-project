@@ -231,7 +231,107 @@ li:hover>a {
     padding-bottom: 10px;
     color: white;
 }
+/* filter */
 
+.filter {
+    width: 270px;
+    height: 845px;
+    color: white;
+    font-size: 21px;
+    background-color: #acc1dd4d;
+    
+    
+    
+}
+.filter p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+
+.input + label {
+    display: inline-flex;
+  align-items: center;
+  user-select: none;
+  margin-bottom: 5px;
+
+}
+.input+label::before {
+    margin-right: 10px;
+    margin-top: 10px ;
+    margin-bottom: 12px;
+    margin-right: 10px;
+    margin-left: 0px;
+   
+}
+
+label {
+    cursor: pointer;
+}
+label::before {
+    content: "";
+  
+    width: 10px;
+    height: 10px;
+    border:1px solid white;
+    cursor: pointer;
+    
+}
+.input[type="checkbox"]:checked + label::before {
+    background-color: white;
+    
+}
+
+
+.input[type="checkbox"] {
+    display: none;
+}
+
+.device-type {
+    height: 160px;
+    padding-top: 32px;
+    padding-left: 30px;
+}
+.color {
+    height: 220px;
+    padding-left: 30px;
+    
+}
+.color p {
+    margin-top: 40px;
+}
+.ram {
+    height: 225px;
+    padding-left: 30px;
+}
+
+.ram p {
+    margin-top: 50px;
+}
+.more-options {
+    height: 20px;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-top: 15px;
+}
+
+.filter-submit {
+    width: 210px;
+    height: 50px;
+    display: block;
+    margin:0 auto;
+    background-color: #2c71b8;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    border: 1px solid #ffff;
+}
+
+.filter-submit:hover {
+    background-color: white;
+    color: #2c71b8;
+}
 /* main */
 
 
