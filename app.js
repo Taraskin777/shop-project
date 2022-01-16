@@ -75,7 +75,7 @@ window.addEventListener('scroll', function() {
   let scrolled = window.pageYOffset;
   console.log(scrolled);
   
-  if (scrolled > 800) {
+  if (scrolled > 941) {
     modalWindow.classList.add("show");
     modalWindow.classList.remove('hide');
   };
