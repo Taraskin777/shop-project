@@ -1,11 +1,10 @@
-
 //add to cart
 const productsCountEl = document.getElementById("products-count");
 const addToCartBtns = document.querySelectorAll(".add");
 
 for (let i = 0; i < addToCartBtns.length; i++) {
   addToCartBtns[i].addEventListener("click", function () {
-  
+
     productsCountEl.textContent = +productsCountEl.textContent + 1;
 
   });
@@ -48,35 +47,75 @@ console.log(modalWindow);
 
 let btnClose = document.querySelector(".btn-close");
 
-detailsBtn.forEach((item) => {
-  item.addEventListener("click", function () {
-    modalWindow.classList.add("show");
-    modalWindow.classList.remove('hide');
-  });
+function openModal() {
+  modalWindow.classList.add("show");
+  modalWindow.classList.remove('hide');
+};
 
-  btnClose.addEventListener("click", function () {
-    modalWindow.classList.remove("show");
-    modalWindow.classList.add('hide');
-  });
+function closeModal() {
+  modalWindow.classList.remove("show");
+  modalWindow.classList.add('hide');
+};
+
+detailsBtn.forEach((item) => {
+  item.addEventListener("click", openModal);
 });
 
+btnClose.addEventListener("click", closeModal);
 
 
-   $ (".slider").slick({
-      dots: true,
-      autoplay: true,     
-   });
-  
+
+
+$(".slider").slick({
+  dots: true,
+  autoplay: true,
+});
+
 // модальне вікно при прокрутці сторінки 
 
 
 
-window.addEventListener('scroll', function() {
-  let scrolled = window.pageYOffset;
-  console.log(scrolled);
-  
-  if (scrolled > 941) {
-    modalWindow.classList.add("show");
-    modalWindow.classList.remove('hide');
-  };
+// window.addEventListener('scroll', function () {
+//   let scrolled = window.pageYOffset;
+//   console.log(scrolled);
+
+//   if (scrolled > 941) {
+//     modalWindow.classList.add("show");
+//     // window.removeEventListener("scroll", function ();
+//   };
+// });
+
+
+function showModalByScroll() {
+  if (window.pageYOffset >= document.body.scrollHeight / 2) {
+    openModal();
+    window.removeEventListener("scroll", showModalByScroll);
+  }
+}
+
+window.addEventListener("scroll", showModalByScroll);
+
+
+AOS.init();
+
+
+
+let decrementBtns = document.querySelectorAll(".decrement-button")[0];
+let incrementBtns = document.querySelectorAll(".increment-button")[0];
+let quantityInput = document.querySelectorAll(".product-quantity input")[0];
+
+incrementBtns.addEventListener("click", function () {
+  let currentValue = +quantityInput.value;
+  let nextValue = currentValue + 1;
+  quantityInput.value = nextValue;
+
+  console.log(currentValue);
+});
+
+decrementBtns.addEventListener("click", function () {
+  let currentValue = +quantityInput.value;
+  let nextValue = currentValue - 1;
+  quantityInput.value = nextValue;
+
+  console.log(currentValue);
 });

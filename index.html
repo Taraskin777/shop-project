@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -145,7 +147,7 @@
                         <div class="col-4">Sort</div>
                     </div>
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-4" data-aos="fade-down" data-aos-duration="2000">
                             <div class="product-card">
                                 <div class="boximage">
                                     <img class="image" src="images/imac.png" alt="">
@@ -161,6 +163,11 @@
                                         <p><span>RAM:</span>1 GB</p>
                                     </div>
                                     <div class="price">$599 <sup>25</sup></div>
+                                    <div class="product-quantity">
+                                        <button class="decrement-button">-</button>
+                                        <input type="text" value="1" readonly>
+                                        <button class="increment-button">+</button>
+                                    </div>
                                     <button class="button-big more">MORE DETAILS</button>
                                     <button class="button-big add">ADD TO CART</button>
                                 </div>
@@ -168,7 +175,7 @@
 
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-4" data-aos="fade-down" data-aos-duration="2000">
                             <div class="product-card">
                                 <div class="boximage">
                                     <img class="image" src="images/tvbox.png" alt="">
@@ -189,7 +196,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-4" data-aos="fade-down" data-aos-duration="2000">
                             <div class="product-card">
                                 <div class="boximage">
                                     <img class="image" src="images/watch.png" alt="">
@@ -377,6 +384,8 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="app.js"></script>
 
