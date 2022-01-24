@@ -4,12 +4,11 @@ const addToCartBtns = document.querySelectorAll(".add");
 
 for (let i = 0; i < addToCartBtns.length; i++) {
   addToCartBtns[i].addEventListener("click", function () {
-
-    productsCountEl.textContent = +productsCountEl.textContent + 1;
-
+    productsCountEl.textContent =
+      +productsCountEl.textContent + +quantityInput[i].value;
+    quantityInput[i].value = 1;
   });
 }
-
 // add and remove like
 
 let productLike = document.querySelectorAll(".heart");
@@ -73,19 +72,6 @@ $(".slider").slick({
 
 // модальне вікно при прокрутці сторінки 
 
-
-
-// window.addEventListener('scroll', function () {
-//   let scrolled = window.pageYOffset;
-//   console.log(scrolled);
-
-//   if (scrolled > 941) {
-//     modalWindow.classList.add("show");
-//     // window.removeEventListener("scroll", function ();
-//   };
-// });
-
-
 function showModalByScroll() {
   if (window.pageYOffset >= document.body.scrollHeight / 2) {
     openModal();
@@ -99,23 +85,105 @@ window.addEventListener("scroll", showModalByScroll);
 AOS.init();
 
 
+//кнопка додавання кількості товарів на картці товару(функціональне програмування)
 
-let decrementBtns = document.querySelectorAll(".decrement-button")[0];
-let incrementBtns = document.querySelectorAll(".increment-button")[0];
-let quantityInput = document.querySelectorAll(".product-quantity input")[0];
 
-incrementBtns.addEventListener("click", function () {
-  let currentValue = +quantityInput.value;
-  let nextValue = currentValue + 1;
-  quantityInput.value = nextValue;
 
-  console.log(currentValue);
-});
+// function toggleButtonState(count) {
+//   decrementBtns.disabled = count <= minCount;
+//   incrementBtns.disabled = count >= maxCount;
+// }
 
-decrementBtns.addEventListener("click", function () {
-  let currentValue = +quantityInput.value;
-  let nextValue = currentValue - 1;
-  quantityInput.value = nextValue;
+// for (let i = 0; i < quantityInput.length; i++) {
+//   let currentValue = +quantityInput[i].value;
+//   toggleButtonState(currentValue, incrementBtns[i], decrementBtns[i]);
+// }
 
-  console.log(currentValue);
-});
+// function toggleButtonState(count, incrementBtn, decrementBtn) {
+//   decrementBtn.disabled = count <= minCount;
+//   incrementBtn.disabled = count >= maxCount;
+// }
+
+// for (let i = 0; i < incrementBtns.length; i++) {
+//   incrementBtns[i].addEventListener("click", function () {
+//     let currentValue = +quantityInput[i].value;
+//     let nextValue = currentValue + 1;
+//     quantityInput[i].value = nextValue;
+
+//     toggleButtonState(nextValue, incrementBtns[i], decrementBtns[i]);
+//   });
+// }
+
+// for (let i = 0; i < decrementBtns.length; i++) {
+//   decrementBtns[i].addEventListener("click", function () {
+//     let currentValue = +quantityInput[i].value;
+//     let nextValue = currentValue - 1;
+//     quantityInput[i].value = nextValue;
+
+//     toggleButtonState(nextValue, incrementBtns[i], decrementBtns[i]);
+//   });
+// }
+
+
+let decrementBtns = document.querySelectorAll(".decrement-button");
+let incrementBtns = document.querySelectorAll(".increment-button");
+let quantityInput = document.querySelectorAll(".product-quantity input");
+// let minCount = 1;
+// let maxCount = 5;
+
+function Counter(
+  incrementBtn,
+  decrementBtn,
+  inputField,
+  minCount = 1,
+  maxCount = 5
+) {
+  this.domRefs = {
+    incrementBtn,
+    decrementBtn,
+    inputField,
+  };
+  this.toggleButtonState = function () {
+    let count = this.domRefs.inputField.value;
+    this.domRefs.decrementBtn.disabled = count <= minCount;
+    this.domRefs.incrementBtn.disabled = count >= maxCount;
+
+  };
+  this.toggleButtonState();
+
+  this.increment = function () {
+    this.domRefs.inputField.value = +this.domRefs.inputField.value + 1;
+    this.toggleButtonState();
+  };
+  this.decrement = function () {
+    this.domRefs.inputField.value = +this.domRefs.inputField.value - 1;
+    this.toggleButtonState();
+  };
+
+  this.domRefs.incrementBtn.addEventListener(
+    "click",
+    this.increment.bind(this)
+  );
+
+  this.domRefs.decrementBtn.addEventListener(
+    "click",
+    this.decrement.bind(this)
+  );
+
+
+};
+
+
+
+let counter1;
+for(i = 0; i < quantityInput.length; i++) {
+    counter1 = new Counter(incrementBtns[i],decrementBtns[i],quantityInput[i]);
+}
+// let counter1 = new Counter(
+  
+//   incrementBtns[0],  
+//   decrementBtns[0],
+//   quantityInput[0]
+// );
+
+// console.log(counter1);

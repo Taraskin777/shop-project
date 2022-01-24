@@ -465,6 +465,7 @@ h2 {
     width: 268px;
     height: 468px;
     background-color: rgba(44, 113, 184, 0.75);
+    position: relative;
 }
 
 .boximage {
@@ -562,6 +563,45 @@ h2 {
 sup {
     font-size: 24px;
 }
+
+.product-quantity {
+    position: absolute;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    bottom: 127px;
+    
+}
+.product-quantity input {
+
+    width: 30px;
+    text-align: center;
+    background-color:inherit;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.decrement-button {
+background-color: inherit;
+border: none;
+color: white;
+cursor: pointer;
+font-size: 20px;
+
+
+}
+
+.increment-button {
+    background-color: inherit;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    
+    
+}
+
 
 .button-big {
     width: 210px;
